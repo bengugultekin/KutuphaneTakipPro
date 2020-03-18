@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KutuphaneTakipPro"
         mc:Ignorable="d"
-        Title="MainWindow" MinHeight="600" MinWidth="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="MainWindow" MinHeight="600" MinWidth="900" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" AllowsTransparency="True" WindowStyle="None">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="170"/>
@@ -21,7 +21,7 @@
                     <RowDefinition Height="35"/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                
+
                 <Border Grid.Row="0">
                     <DockPanel>
                         <Image Source="images/icon/study.png" Height="24" Width="24" HorizontalAlignment="Left" Margin="6,6,0,5"/>
@@ -51,7 +51,7 @@
                 </Border>
             </Grid>
         </Border>
-        <Border Background="#134187" Grid.Column="1" Grid.Row="0">
+        <Border Background="#134187" Grid.Column="1" Grid.Row="0"  x:Name="brd_Sagust" MouseDown="brd_Sagust_MouseDown">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="35"/>
@@ -59,13 +59,59 @@
                 </Grid.RowDefinitions>
                 <Border Background="White">
                     <DockPanel Width="72" HorizontalAlignment="Right">
-                        <Button Content="_" Width="35"/>
-                        <Button Content="X" Width="35"/>
+                        <Button Content="__" Style="{DynamicResource minibutonlar}" FontSize="12" FontWeight="Bold"/>
+                        <Button Content="X" x:Name="btn_kapat" Click="btn_kapat_Click" Style="{DynamicResource minibutonlar}" FontSize="12"/>
                     </DockPanel>
                 </Border>
             </Grid>
         </Border>
-        <Border Background="#134187" Grid.Column="0" Grid.Row="1"></Border>
+        <Border Background="#134187" Grid.Column="0" Grid.Row="1">
+            <StackPanel>
+                <Button Height="50" Style="{DynamicResource menubutonlar}">
+                    <DockPanel Width="220" Margin="15,0,0,0">
+                        <Image Source="C:\Users\Bengu\source\repos\KutuphaneTakipPro\images\icon\list.png" Width="32"/>
+                        <Label Content="Kitap Listesi" Foreground="White" FontSize="12"/>
+                    </DockPanel>
+                </Button>
+                <Button Height="50" Style="{DynamicResource menubutonlar}">
+                    <DockPanel Width="220" Margin="15,0,0,0">
+                        <Image Source="C:\Users\Bengu\source\repos\KutuphaneTakipPro\images\icon\reader.png" Width="32"/>
+                        <Label Content="Okuyucu Listesi" Foreground="White" FontSize="12"/>
+                    </DockPanel>
+                </Button>
+                <Button Height="50" Style="{DynamicResource menubutonlar}">
+                    <DockPanel Width="220" Margin="15,0,0,0">
+                        <Image Source="C:\Users\Bengu\source\repos\KutuphaneTakipPro\images\icon\books.png" Width="32"/>
+                        <Label Content="Ödünç Alınan Kitaplar" Foreground="White" FontSize="12"/>
+                    </DockPanel>
+                </Button>
+                <Button Height="50" Style="{DynamicResource menubutonlar}">
+                    <DockPanel Width="220" Margin="15,0,0,0">
+                        <Image Source="C:\Users\Bengu\source\repos\KutuphaneTakipPro\images\icon\calendar.png" Width="32"/>
+                        <Label Content="Zamanı Dolanlar" Foreground="White" FontSize="12"/>
+                    </DockPanel>
+                </Button>
+                <Button Height="50" Style="{DynamicResource menubutonlar}">
+                    <DockPanel Width="220" Margin="15,0,0,0">
+                        <Image Source="C:\Users\Bengu\source\repos\KutuphaneTakipPro\images\icon\settings.png" Width="32"/>
+                        <Label Content="Ayarlar" Foreground="White" FontSize="12"/>
+                    </DockPanel>
+                </Button>
+                <Button Height="50" Style="{DynamicResource menubutonlar}">
+                    <DockPanel Width="220" Margin="15,0,0,0">
+                        <Image Source="C:\Users\Bengu\source\repos\KutuphaneTakipPro\images\icon\quality.png" Width="32"/>
+                        <Label Content="Hakkında" Foreground="White" FontSize="12"/>
+                    </DockPanel>
+                </Button>
+                <Image Source="C:\Users\Bengu\source\repos\KutuphaneTakipPro\images\pencereimg\use-png-as-icon-windows-10-8.png" Height="221" />
+
+                <Canvas>
+                    <Border Canvas.Left="72" Canvas.Top="-130" Background="#7F18215B" RenderTransformOrigin="1.24,-5.577" CornerRadius="10,10,10,10">
+                        <Label Content="10.0.0.1" Foreground="White" Width="70" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                    </Border>
+                </Canvas>
+            </StackPanel>
+        </Border>
 
     </Grid>
 </Window>

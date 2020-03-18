@@ -24,5 +24,16 @@ namespace KutuphaneTakipPro
         {
             InitializeComponent();
         }
+
+        private void btn_kapat_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void brd_Sagust_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (Mouse.LeftButton == MouseButtonState.Pressed)
+                this.DragMove();
+        }
     }
 }

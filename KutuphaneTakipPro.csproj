@@ -103,5 +103,29 @@
   <ItemGroup>
     <Resource Include="images\icon\book %281%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\icon\calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\icon\certificate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\icon\quality.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\icon\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\icon\list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\icon\reader.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\icon\books.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\pencereimg\use-png-as-icon-windows-10-8.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

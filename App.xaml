@@ -4,6 +4,73 @@
              xmlns:local="clr-namespace:KutuphaneTakipPro"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        
+        
+        <!--Mini Butonlar-->
+        <Style x:Key="minibutonlar" TargetType="Button">
+            <Setter Property="Foreground" Value="#FF787878"/>
+            <Setter Property="Width" Value="35"/>
+            <Setter Property="FontSize" Value="9"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderThickness" Value="0,0,0,0"/>
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border"
+                                BorderThickness="0,0,0,0"
+                                BorderBrush="#FF8F8F8F"
+                                Background="White">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="White"/>
+                                <Setter TargetName="border" Property="Background" Value="#134187"/>
+                                <Setter Property="Foreground" Value="White"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!--Menu Butonlar-->
+        <Style x:Key="menubutonlar" TargetType="Button">
+            <Setter Property="Foreground" Value="#FF787878"/>
+            <Setter Property="Margin" Value="0,0,0,1"/>
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border"
+                                BorderThickness="5,0,0,0"
+                                BorderBrush="#134187"
+                                Background="{x:Null}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="#2b5493"/>
+                                <Setter TargetName="border" Property="Background" Value="#2b5493"/>
+                                <Setter TargetName="border" Property="BorderThickness" Value="5,0,0,0"/>                                
+                                <Setter Property="Foreground" Value="White"/>
+                            </Trigger>
+
+                            <Trigger Property="IsFocused" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="White"/>
+                                <Setter TargetName="border" Property="Background" Value="#2b5493"/>
+                                <Setter TargetName="border" Property="BorderThickness" Value="5,0,0,0"/>
+                                <Setter Property="Foreground" Value="White"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+
+
     </Application.Resources>
 </Application>
